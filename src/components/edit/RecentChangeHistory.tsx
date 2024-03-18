@@ -67,6 +67,7 @@ const UserAvatar: React.FC<{ userId?: string }> = ({ userId }) => {
 const Header: React.FC<{ userId?: string, opStr: string, createdAt: number }> = ({ userId, opStr, createdAt }) => {
   return (
     <div className='mb-2 flex items-center justify-between flex-wrap gap-y-1.5'>
+      
       <div className='flex items-center gap-1'>
         {userId == null
           ? (

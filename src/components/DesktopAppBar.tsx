@@ -60,6 +60,7 @@ const navListDefault: JSX.Element[] = [
     route: '/about',
     title: 'About'
   },
+ 
   {
     route: 'https://opencollective.com/openbeta/contribute/t-shirt-31745',
     title: 'T-shirts'
