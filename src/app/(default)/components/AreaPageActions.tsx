@@ -9,10 +9,10 @@ import { signIn, useSession } from 'next-auth/react'
  */
 export const AreaPageActions: React.FC<{ uuid: string, areaName: string }> = ({ uuid, areaName }) => {
   const { status } = useSession()  
-  console.log(status)
+ 
     return (
   <ul className='max-w-sm md:max-w-md flex items-center justify-between gap-2 w-full'>
-    <Link href={`/editArea/${uuid}`} target='_new' className='btn btn-solid btn-accent shadow-md'>
+    <Link href={`/editArea/${uuid}`} target='_new' className={`btn btn-solid btn-accent shadow-md ${status === 'unauthenticated' && 'pointer-events-none opacity-50'}`}>
       <PencilSimple size={20} weight='duotone' /> Edit
     </Link>
 
