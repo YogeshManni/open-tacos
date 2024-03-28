@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 import { PencilSimple, MapTrifold } from '@phosphor-icons/react/dist/ssr'
 import { ShareAreaLinkButton } from '@/app/(default)/components/ShareAreaLinkButton'
