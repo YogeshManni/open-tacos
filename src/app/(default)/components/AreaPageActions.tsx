@@ -2,11 +2,14 @@ import Link from 'next/link'
 import { PencilSimple, MapTrifold } from '@phosphor-icons/react/dist/ssr'
 import { ShareAreaLinkButton } from '@/app/(default)/components/ShareAreaLinkButton'
 import { UploadPhotoButton } from '@/components/media/PhotoUploadButtons'
-
+import { signIn, useSession } from 'next-auth/react'
 /**
  * Main action bar for area page
  */
-export const AreaPageActions: React.FC<{ uuid: string, areaName: string } > = ({ uuid, areaName }) => (
+export const AreaPageActions: React.FC<{ uuid: string, areaName: string }> = ({ uuid, areaName }) => {
+  const { status } = useSession()  
+  console.log(status)
+    return (
   <ul className='max-w-sm md:max-w-md flex items-center justify-between gap-2 w-full'>
     <Link href={`/editArea/${uuid}`} target='_new' className='btn btn-solid btn-accent shadow-md'>
       <PencilSimple size={20} weight='duotone' /> Edit
@@ -20,6 +23,7 @@ export const AreaPageActions: React.FC<{ uuid: string, areaName: string } > = ({
     <ShareAreaLinkButton uuid={uuid} areaName={areaName} />
   </ul>
 )
+}
 
 /**
  * Skeleton.  Height = actual component's button height.
