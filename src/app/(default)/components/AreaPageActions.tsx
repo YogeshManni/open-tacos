@@ -16,7 +16,7 @@ export const AreaPageActions: React.FC<{ uuid: string, areaName: string }> = ({ 
       <PencilSimple size={20} weight='duotone' /> Edit
     </Link>
 
-    <UploadPhotoButton />
+    <UploadPhotoButton  status= {status}/>
 
     <Link href='#map' className='btn'>
       <MapTrifold size={20} className='hidden md:inline' /> Map

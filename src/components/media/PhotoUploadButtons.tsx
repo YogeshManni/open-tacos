@@ -1,7 +1,8 @@
+
 import { Camera } from '@phosphor-icons/react/dist/ssr'
 import { BaseUploaderWithNext13Context } from './BaseUploader'
 
-export const UploadPhotoButton: React.FC = () => (
+export const UploadPhotoButton: React.FC<{status:string}> = ({status}) => (
   <BaseUploaderWithNext13Context className='btn'>
     <Camera size={20} /> <span className='hidden md:inline'>Photo</span>
   </BaseUploaderWithNext13Context>
